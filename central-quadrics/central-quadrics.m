@@ -15,7 +15,7 @@ params = {
 
 
 Function[{a, b, c},
-  RegionPlot3D[a x^2 + b y^2 + c z^2 > 4/11 (a+b+c), {x,-1,1}, {y,-1,1}, {z,-1,1},
+  RegionPlot3D[a x^2 + b y^2 + c z^2 > 4/11 (a + b + c), {x, -1, 1}, {y, -1, 1}, {z, -1, 1},
   Mesh->3, Axes->False, PlotRangePadding->0, ViewPoint->{+1, +1, -1} * 1000, ViewVertical->{0, 0, -1}]
 ] @@@ params[[All,{1, 1, 2}]] //
 GraphicsRow[#, Spacings->5, ImageSize->Full]&
@@ -40,6 +40,6 @@ Show[
 
 SetDirectory[NotebookDirectory[]];
 Function[{a, b, c},
-      RegionPlot3D[a x^2 + b y^2 + c z^2 > 4/11 (a + b +c) , {x, -1, 1}, {y, -1, 1}, {z, -1, 1},
+      RegionPlot3D[a x^2 + b y^2 + c z^2 > 4/11 (a + b + c) , {x, -1, 1}, {y, -1, 1}, {z, -1, 1},
         Mesh -> 3, Axes -> False, PlotRangePadding -> 0, ViewPoint -> {+1, +1, -1} * 1000, ViewVertical -> {0,0,-1}]
       ] @@@ params[[All, {1, 1, 2}]] // Export["quadrics.gif", #] &
